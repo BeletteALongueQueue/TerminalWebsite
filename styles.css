@@ -1,0 +1,66 @@
+body {
+    background-color: black;
+    color: #00ff00;
+    font-family: monospace;
+    margin: 0;
+    padding: 10px; /* Ajoutez un padding pour l'espace à partir du bord */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+#terminal {
+    width: 100%;
+    margin-left: 20px; /* Ajoutez une marge à gauche */
+}
+
+#name {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+   font-size: 24px;  /*Ajustez cette valeur pour augmenter la taille de la police */
+}
+
+#output {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+#inputContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.prompt {
+   /* font-size: 18px; /* Taille de la police du prompt */
+    line-height: 1.5; /* Espacement entre les lignes */
+    color: #00ff00; /* Couleur par défaut du terminal */
+}
+
+.prompt2 {
+   /* font-size: 18px; /* Taille de la police du prompt secondaire */
+    line-height: 1.5; /* Espacement entre les lignes */
+    color: #00ff00; /* Couleur par défaut du terminal */
+}
+
+.username {
+    color: blue; /* Couleur bleue pour le nom d'utilisateur */
+}
+
+#commandInput {
+    border: none;
+    background: black;
+    color: #00ff00;
+    font-family: monospace;
+   /* font-size: 16px; */
+    outline: none;
+    margin-left: 10px; /* Ajustez cette valeur pour aligner avec le prompt */
+}
+.ping-animation {
+    /* font-family: 'Courier New', Courier, monospace; */
+    white-space: pre;
+    color: #00ff00;
+    margin-top: 10px;
+}

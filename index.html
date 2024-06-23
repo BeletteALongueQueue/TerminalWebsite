@@ -1,0 +1,68 @@
+<!-- rootme -->
+<!-- rickroll qund on tape la commande recompense -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="kali.png" type="image/png">
+    <style>
+        /* Styles pour l'achievement */
+        .achievement {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background-color: #fff;
+            border: 1px solid #000;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: none; /* Masquer par défaut */
+        }
+        .achievement img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        /* Styles pour l'animation "ping" */
+        .ping-animation {
+            font-family: monospace;
+            white-space: pre;
+        }
+    </style>
+</head>
+<body>
+    <div id="terminal">
+        <pre id="name"></pre>
+        <div id="output"></div>
+        <div id="inputContainer">
+            <div>
+                <span id="prompt1">┌──(<span id="username" style="color: blue;">sacha㉿DESKTOP-07ZXXUP</span>)-[~]</span>
+            </div>
+            <div>
+                <span id="prompt2">└─$</span>
+                <input type="text" id="commandInput" autofocus>
+            </div>
+        </div>
+    </div>
+    <div id="achievement" class="achievement">
+        <img src="achievement.png" alt="Achievement">
+        <div>
+            <strong style="color: #000;">Achievement Unlocked!</strong>
+            <p style="color: #000;">Miam !</p>
+        </div>
+    </div>
+    <div id="achievement2" class="achievement">
+        <img src="ping.png" alt="ping">
+        <div>
+            <strong>Achievement Unlocked!</strong>
+            <p>C'est un terminal après tout</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

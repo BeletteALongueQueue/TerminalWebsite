@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievement Unlocked</title>
+    <style>
+        /* Styles pour l'achievement */
+        .achievement {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background-color: #fff;
+            border: 1px solid #000;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .achievement img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="achievement" class="achievement">
+        <img src="achievement.png" alt="Achievement">
+        <div>
+            <strong>Achievement Unlocked!</strong>
+            <p>Miam !</p>
+        </div>
+    </div>
+
+    <div id="achievement2" class="achievement">
+        <img src="ping.png" alt="ping">
+        <div>
+            <strong>Achievement Unlocked!</strong>
+            <p>C'est un terminal après tout</p>
+        </div>
+    </div>
+
+    <script>
+        // Définir le cookie
+        document.cookie = "Vieux Cookie=Tu devrais peut être saisir la commande secret";
+
+        // Masquer l'achievement après 5 secondes
+        setTimeout(() => {
+            document.getElementById("achievement").style.display = "none";
+        }, 5000);
+    </script>
+</body>
+</html>
