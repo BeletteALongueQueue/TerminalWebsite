@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         pingDiv.innerHTML += `--- ${ip} ping statistics ---\n${maxCount} packets transmitted, ${maxCount} received, 0% packet loss, time ${maxCount * interval}ms\n`;
                         resolve(); // Résoudre la promesse une fois terminé
                         outputDiv.scrollTop = outputDiv.scrollHeight; // Fait défiler automatiquement vers le bas
+                        displayAchievement("achievement2"); // Afficher l'achievement 2
                         return;
                     }
                     pingDiv.innerHTML += count === 0 ? pingText : pingResponse.replace("icmp_seq=1", `icmp_seq=${count}`);
@@ -113,8 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.getElementById("cookie").addEventListener("click", () => {
                     // Définir le cookie
                     document.cookie = "Cookie=Tu devrais saisir la commande secret !";
-                    // Afficher le cookie dans la console
-                    console.log("Voici ton cookie spécial: ", document.cookie);
 
                     // Afficher l'achievement
                     displayAchievement("achievement");
