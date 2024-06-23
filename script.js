@@ -15,6 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
             window.open("https://macron.fun", "_blank");
             return ""; // Retourne une chaîne vide pour ne pas afficher de sortie dans le terminal
         },
+        flag: () => {
+            window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUIcmlja3JvbGw%3D", "_blank"); // Remplace par l'URL réelle
+            setTimeout(10000);
+            displayAchievement("achievement3"); // Afficher l'achievement 2
+            return ""; // Retourne une chaîne vide pour ne pas afficher de sortie dans le terminal
+        },
         secret: "aXAgOiA5Ny4xNTMuMjUuNzg=",
         github: () => {
             window.open("https://github.com/BeletteALongueQueue", "_blank");
@@ -42,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         resolve(); // Résoudre la promesse une fois terminé
                         outputDiv.scrollTop = outputDiv.scrollHeight; // Fait défiler automatiquement vers le bas
                         displayAchievement("achievement2"); // Afficher l'achievement 2
+                        triggerDownload("ping_result.txt", "flag"); // Lancer le téléchargement avec un contenu prédéfini
                         return;
                     }
                     pingDiv.innerHTML += count === 0 ? pingText : pingResponse.replace("icmp_seq=1", `icmp_seq=${count}`);
@@ -71,6 +78,16 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         printText(); // Démarrer l'affichage progressif
+    };
+
+    const triggerDownload = (filename, content) => {
+        const element = document.createElement("a");
+        const file = new Blob([content], { type: 'text/plain' });
+        element.href = URL.createObjectURL(file);
+        element.download = filename;
+        document.body.appendChild(element); // Nécessaire pour Firefox
+        element.click();
+        document.body.removeChild(element);
     };
 
     // Générer l'ASCII art
