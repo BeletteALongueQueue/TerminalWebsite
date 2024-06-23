@@ -4,8 +4,8 @@
 Ce site reprend le design de terminal de kali Linux plus spécifiquement sous WSL.
 ![image](README/screen1.png)
 
-Ce site comprend aussi un jeu interactif avec l'utilisateur
-Le lien pour y acceder est le suivant : https://terminal.sachabesser.fr 
+Ce site comprend aussi un jeu interactif avec l'utilisateur,
+le lien pour y acceder est le suivant : https://terminal.sachabesser.fr 
 
 indice : essayer d'attaquer le site avec les failles les plus connues
 
